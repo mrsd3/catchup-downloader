@@ -10,7 +10,7 @@ Outil CLI pour télécharger des replays IPTV via une API Xtream Codes.
 ## Installation
 
 ```bash
-git clone https://github.com/VOTRE_USERNAME/catchup-downloader.git
+git clone https://github.com/mrsd3/catchup-downloader.git
 cd catchup-downloader
 ```
 
