@@ -1,11 +1,11 @@
-# Catchup Downloader
+# IPTV Catchup Downloader
 
-Outil CLI pour télécharger des replays IPTV via une API Xtream Codes.
+CLI tool to download IPTV replays via an Xtream Codes API.
 
-## Prérequis
+## Requirements
 
 - Python 3.10+
-- FFmpeg : `brew install ffmpeg`
+- FFmpeg: `brew install ffmpeg`
 
 ## Installation
 
@@ -14,30 +14,30 @@ git clone https://github.com/mrsd3/catchup-downloader.git
 cd catchup-downloader
 ```
 
-## Utilisation
+## Usage
 
 ```bash
 python3 catchup_downloader.py
 ```
 
-Au premier lancement, le script demande les credentials Xtream Codes (host, port, username, password) et les sauvegarde dans `~/.catchup_config.json`.
+On first launch, the script prompts for your Xtream Codes credentials (host, port, username, password) and saves them to `~/.catchup_config.json`.
 
-### Déroulement
+### How it works
 
-1. Récupération automatique de la liste des chaînes live
-2. Recherche d'une chaîne par nom
-3. Saisie de la plage horaire (`YYYY-MM-DD HH:MM`)
-4. Téléchargement avec barre de progression
-5. Fichier sauvegardé dans `~/Downloads/`
+1. Automatically fetches the live channel list
+2. Search for a channel by name
+3. Enter the time range (`YYYY-MM-DD HH:MM`)
+4. Download with a progress bar
+5. File saved to `~/Downloads/`
 
-### Format de nommage des fichiers
+### File naming format
 
 ```
-NomChaine_2026-04-21_2015-2030.mp4
+ChannelName_2026-04-21_2015-2030.mp4
 ```
 
 ## Notes
 
-- Seules les chaînes avec le catchup activé (`tv_archive: 1`) sont téléchargeables
-- Les credentials sont stockés localement dans `~/.catchup_config.json` — ne pas versionner ce fichier
-- Compatible macOS (Apple Silicon et Intel)
+- Only channels with catchup enabled (`tv_archive: 1`) can be downloaded
+- Credentials are stored locally in `~/.catchup_config.json` — do not commit this file
+- Compatible with macOS (Apple Silicon and Intel)
